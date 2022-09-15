@@ -1,5 +1,5 @@
 <h1> Link menuju ke aplikasi https://aplikasi-katalog.herokuapp.com/ </h1>
-<p> 1. ![user](https://user-images.githubusercontent.com/93859147190306981-de247ce7-1ded-44a2-90ad-0fe3aee107ec.jpg)
+<p> 1. ![user](https://user-images.githubusercontent.com/93859147/190316618-a0868305-06ec-46aa-ad41-8ed978ee1f94.jpg)
 Awalnya permintaan user masuk ke server Django akan diproses melalui urls (request HTTP) kemudian ke views. Jika perlu masuk ke database, maka views akan memanggil query ke models dan hasilnya dikembalikan ke views. Setelah itu, hasilnya akan dipetakan ke template berupa HTML yang dapat dilihat oleh user.
 
 
@@ -21,7 +21,8 @@ Kita tetap dapat membuat aplikasi web berbasis Django tanpa menggunakan virtual 
     path('', show_katalog, name='show_katalog'), ]
 
     Untuk poin 3, awalnya menggunakan perintah python manage.py makemigrations dan python manage.py migrate untuk mempersiapkan migrasi dan menerapkan skema model ke dalam database Django lokal. Setelah itu, menggunakan perintah python manage.py loaddata initial_catalog_data.json untuk memasukkan data ke dalam database Django lokal.
-    Berikutnya, untuk mapping data yang di-render pada views.py akan mengakses katalog.html. Pada katalog.html menggunakan sintaks {{data} untuk menggambil data dari views.py
+    Berikutnya, untuk mapping data yang di-render pada views.py akan mengakses katalog.html. Pada katalog.html menggunakan sintaks {{data} untuk menggambil data dari views.py.
+  
     Untuk poin 4, cara melakukan deployment ke Heroku terhadap aplikasi yang sudah saya buat adalah dengan membuat aplikasi baru terlebih dahulu pada Heroku. Setelah itu pada repositori GitHub, saya menambahkan variable repository secret baru dengan API KEY dan nama aplikasi di Heroku.
 
 </p>
