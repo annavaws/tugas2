@@ -1,0 +1,114 @@
+[
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk" : 1,
+        "fields":{
+            "watched" : "Watched",
+            "title" : "Avengers: Endgame",
+            "rating" : "8.4",
+            "release_date" : "April 26, 2019",
+            "review" : ""
+        }
+    }, 
+
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk" : 2,
+        "fields":{
+            "watched" : "Watched",
+            "title" : "Spider-Man: No Way Home",
+            "rating" : "8.3",
+            "release_date" : "December 17, 2021",
+            "review" : ""
+        }
+    }, 
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk" : 3,
+        "fields":{
+            "watched" : "Watched",
+            "title" : "Frozen 2",
+            "rating" : "6.8",
+            "release_date" : "November 20, 2019",
+            "review" : ""
+        }
+    }, 
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk" : 4,
+        "fields":{
+            "watched" : "Watched",
+            "title" : "Incredibles 2",
+            "rating" : "7.6",
+            "release_date" : "June 14, 2018",
+            "review" : ""
+        }
+    }, 
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk" : 5,
+        "fields":{
+            "watched" : "Watched",
+            "title" : "Deadpool",
+            "rating" : "8",
+            "release_date" : "February 10, 2016",
+            "review" : ""
+        }
+    }, 
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk" : 6,
+        "fields":{
+            "watched" : "Watched",
+            "title" : "Incantation",
+            "rating" : "6.2",
+            "release_date" : "March 18, 2022",
+            "review" : ""
+        }
+    }, 
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk" : 7,
+        "fields":{
+            "watched" : "Not yet",
+            "title" : "Venom",
+            "rating" : "6.6",
+            "release_date" : "October 3, 2018",
+            "review" : ""
+        }
+    }, 
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk" : 8,
+        "fields":{
+            "watched" : "Not yet",
+            "title" : "Sonic the Hedgehog 2",
+            "rating" : "6.5",
+            "release_date" : "April 8, 2022",
+            "review" : ""
+        }
+    }, 
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk" : 9,
+        "fields":{
+            "watched" : "Watched",
+            "title" : "Top Gun: Maverick",
+            "rating" : "8.4",
+            "release_date" : "May 27, 2022",
+            "review" : ""
+        }
+    }, 
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk" : 10,
+        "fields":{
+            "watched" : "Not yet",
+            "title" : "Purple Hearts",
+            "rating" : "6.7",
+            "release_date" : "July 29, 2022",
+            "review" : ""
+        }
+    }
+
+]
