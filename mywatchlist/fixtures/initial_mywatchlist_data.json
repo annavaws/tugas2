@@ -3,11 +3,11 @@
         "model": "mywatchlist.mywatchlist",
         "pk" : 1,
         "fields":{
-            "watched" : "Watched",
+            "watched" : "Yes",
             "title" : "Avengers: Endgame",
             "rating" : "8.4",
             "release_date" : "April 26, 2019",
-            "review" : ""
+            "review" : "The best Marvel movie so far"
         }
     }, 
 
@@ -15,55 +15,55 @@
         "model": "mywatchlist.mywatchlist",
         "pk" : 2,
         "fields":{
-            "watched" : "Watched",
+            "watched" : "Yes",
             "title" : "Spider-Man: No Way Home",
             "rating" : "8.3",
             "release_date" : "December 17, 2021",
-            "review" : ""
+            "review" : "Packed with action, emotion, and surprises, Spider-Man No Way Home is franchise fan service at it’s finest"
         }
     }, 
     {
         "model": "mywatchlist.mywatchlist",
         "pk" : 3,
         "fields":{
-            "watched" : "Watched",
+            "watched" : "Yes",
             "title" : "Frozen 2",
             "rating" : "6.8",
             "release_date" : "November 20, 2019",
-            "review" : ""
+            "review" : "Teamwork Reliance Genuineity Family ties are everything."
         }
     }, 
     {
         "model": "mywatchlist.mywatchlist",
         "pk" : 4,
         "fields":{
-            "watched" : "Watched",
+            "watched" : "Yes",
             "title" : "Incredibles 2",
             "rating" : "7.6",
             "release_date" : "June 14, 2018",
-            "review" : ""
+            "review" : "The concept is very nice & full of suspense and comedy."
         }
     }, 
     {
         "model": "mywatchlist.mywatchlist",
         "pk" : 5,
         "fields":{
-            "watched" : "Watched",
+            "watched" : "Yes",
             "title" : "Deadpool",
             "rating" : "8",
             "release_date" : "February 10, 2016",
-            "review" : ""
+            "review" : "What an absolutely fantastic sequel to the first movie! "
         }
     }, 
     {
         "model": "mywatchlist.mywatchlist",
         "pk" : 6,
         "fields":{
-            "watched" : "Watched",
+            "watched" : "Yes",
             "title" : "Incantation",
             "rating" : "6.2",
             "release_date" : "March 18, 2022",
-            "review" : ""
+            "review" : "Great thriller!"
         }
     }, 
     {
@@ -74,7 +74,7 @@
             "title" : "Venom",
             "rating" : "6.6",
             "release_date" : "October 3, 2018",
-            "review" : ""
+            "review" : "One of the best anti-hero character movie."
         }
     }, 
     {
@@ -85,18 +85,18 @@
             "title" : "Sonic the Hedgehog 2",
             "rating" : "6.5",
             "release_date" : "April 8, 2022",
-            "review" : ""
+            "review" : "Definetly better than the first movie, cause we get Tails, Knuckles, and Robotmnik going berserk!"
         }
     }, 
     {
         "model": "mywatchlist.mywatchlist",
         "pk" : 9,
         "fields":{
-            "watched" : "Watched",
+            "watched" : "Yes",
             "title" : "Top Gun: Maverick",
             "rating" : "8.4",
             "release_date" : "May 27, 2022",
-            "review" : ""
+            "review" : "Outstanding blockbuster film that exceeds expectations!"
         }
     }, 
     {
@@ -107,7 +107,7 @@
             "title" : "Purple Hearts",
             "rating" : "6.7",
             "release_date" : "July 29, 2022",
-            "review" : ""
+            "review" : "Must watch if you are into romance, drama, music, growth and emotional movies."
         }
     }
 
