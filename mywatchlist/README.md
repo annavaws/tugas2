@@ -2,9 +2,8 @@
 <h2>1. Jelaskan perbedaan antara JSON, XML, dan HTML!</h2>
 <p>JSON merupakan format data yang cara penulisannya menggunakan objek JavaScript. XML adalah bahasa markup. JSON menyimpan elemen secara efisien sehingga tidak rapi untuk diliat berbeda dengan XML yang menyimpan elemennya secara terstruktur, sehingga mudah dibaca oleh pengguna. HTML adalah bahasa yang menggunakan tag yang akan ditafsirkan oleh browser sehingga dapat ditampilkan secara tepat.
 </p>
-<h2>2. Jelaskan mengapa kita memerlukan data delivery dalam pengimplementasian sebuah platform?</h>
-<p>Untuk mengirim data dari satu stack ke stack lainnya, data yang dikirim juga dapat bermacam-macam seperti html, xml, dan json.
-</p>
+<h2>2. Jelaskan mengapa kita memerlukan data delivery dalam pengimplementasian sebuah platform?</h2>
+<p>Untuk mengirim data dari satu stack ke stack lainnya, data yang dikirim juga dapat bermacam-macam seperti html, xml, dan json.</p>
 <h2>3. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.</h2>
 <p>Awalnya menggunakan command python manage.py startapp mywatchlist untuk membuat aplikasi baru pada repositori. 
 Setelah itu di project_django menambahkan path mywatchlist pada urls.py dan pada variabel INSTALLED_APPS di settings.py menambahkan mywatchlist. 
