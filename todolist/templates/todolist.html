@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block meta %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/todolist.css' %}">
+{% endblock meta %}
+
+{% block content %}
+
+<h1>Tugas 4 Assignment PBP/PBD</h1>
+
+<div>
+    <b>Username: </b> {{nama}}
+</div>
+
+<button><a href="{%url 'todolist:create-task' %}">Tambah Task Baru</a></button>
+
+<table id="task-table">
+    <tr>
+        <th>Pk</th>
+        <th>Date</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Status</th>
+        <!-- <th></th> -->
+    </tr>
+    {% comment %} Add the data below this line {% endcomment %}
+    {% for isi in data_todolist %}
+    <tr>
+        <td>{{isi.pk}}</td>
+        <td>{{isi.date}}</td>
+        <td>{{isi.title}}</td>
+        <td>{{isi.description}}</td>
+        <td>{{isi.is_finished}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<h5>Sesi terakhir login: {{ last_login }}</h5>
+<button><a href="{% url 'todolist:logout' %}">Logout</a></button>
+
+
+{% endblock content %}
