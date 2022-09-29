@@ -1,4 +1,13 @@
 <h1> Link menuju ke aplikasi https://aplikasi-katalog.herokuapp.com/todolist/ </h1>
+
+<h2>
+Akun: akunPertama
+Pass: akundummy1
+Akun: akunKedua
+Pass: akundummy2
+
+</h2>
+
 <h2>1. Apa kegunaan {% csrf_token %} pada elemen <form>? Apa yang terjadi apabila tidak ada potongan kode tersebut pada elemen <form>?</h2>
 <p>
 csrf adalah Cross-Site Request Forgery gunanya untuk security, yaitu mencegah penyerang menggunakan script memanipulasi dokumen htmlnya
