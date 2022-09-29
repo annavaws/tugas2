@@ -30,7 +30,6 @@ def show_todolist(request):
     context = {
         'data_todolist': data_todolist,
         'nama': request.user.username,
-        'id': '12345',
         'last_login': request.COOKIES['last_login']
     }
     # return todolist.html sebagai tampilan
@@ -90,7 +89,6 @@ def create_task(request):
             task.user = request.user
             task.title = form.cleaned_data['title']
             task.description = form.cleaned_data['description']
-            # task.is_finished = task.get_status(form.cleaned_data['is_finished'])
             task.is_finished = form.cleaned_data['is_finished']
             # validate
             task.save()

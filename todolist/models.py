@@ -17,9 +17,7 @@ class Task(models.Model):
                  ("Belum Selesai", "Belum selesai")),
         default="Belum Selesai",
     )
+    
     # untuk tampilan admin
     def __str__(self) -> str:
         return self.title + "---" + str(self.date)
-
-    def get_status(self) -> str:
-        return "Selesai" if self.is_finished else "Belum Selesai"

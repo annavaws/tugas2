@@ -17,17 +17,15 @@
 
 <table id="task-table">
     <tr>
-        <th>Pk</th>
         <th>Date</th>
         <th>Title</th>
         <th>Description</th>
         <th>Status</th>
-        <!-- <th></th> -->
     </tr>
     {% comment %} Add the data below this line {% endcomment %}
     {% for isi in data_todolist %}
     <tr>
-        <td>{{isi.pk}}</td>
+        <!-- <td>{{isi.pk}}</td> -->
         <td>{{isi.date}}</td>
         <td>{{isi.title}}</td>
         <td>{{isi.description}}</td>
