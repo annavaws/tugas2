@@ -102,6 +102,6 @@ dan masih banyak lagi yang bisa dibaca dari link berikut <a href="https://www.w3
 
 <h2>Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.</h2>
 <p>
-Reference membuat card dari <a href ="https://getbootstrap.com/docs/4.1/components/card/#card-groups">ini</a>
-https://www.youtube.com/watch?v=biOCexhZZd8
+Menganti isi file html login, register, todolist_form, dan todolist dengan menambahkan framework bootstrap dan menggunakan internal css. Dan menambahkan line <meta name="viewport" content="width=device-width, initial-scale=1"> untuk membuatnya jadi responsive. Setelah itu membuat card dengan mengambil referensi dari <a href ="https://getbootstrap.com/docs/4.1/components/card/#card-groups">ini</a>.
+
 </p>

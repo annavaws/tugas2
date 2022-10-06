@@ -1,14 +1,10 @@
 {% extends 'base.html' %}
 
-{% block meta %}
-{% load static %}
-<link rel="stylesheet" href="{% static 'css/todolist.css' %}">
-
-{% endblock meta %}
 
 {% block content %}
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Task Form</title>
 </head>
 <body>
@@ -18,7 +14,7 @@
     <form method="POST" action="">
         {% csrf_token %}
         {{ form.as_table }}
-        <input type="submit" value="Submit">
+        <input class = "btn" type="submit" value="Submit">
     </form>
 </div>
 
@@ -27,5 +23,18 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 
+<style>
+    #form {
+        background-color: rgb(110, 73, 165);
+        font-family: lucida sans;
+        color: #fffffe;
+        padding: 20px 20px 100px 100px;
+            
+    }
+    .btn {
+        background-color: black;
+        color: greenyellow;
+    }
+</style>
 
 {% endblock content %}
