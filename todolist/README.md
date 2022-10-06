@@ -62,23 +62,23 @@ karena koneksi internet tidak bagus.
 
 <h2>Jelaskan tag HTML5 yang kamu ketahui.</h2>
 <p> 
-<a> mendefinisikan hyperlink
-<b> mendefinisikan bold style pada text
-<body> mendefinisikan body dari dokumen
-<br> membuat new line 
-<button> membuat button yang dapat diklik
-<div> menspesifikasikan sebuah section pada dokumen
-<form> mendefinisikan form html 
-<head> mendefinisikan porsi head dari dokumen yang berisi informasi tentang dokumen misalnya title
-<img> merepresentasikan gambar
-<input> mendefinisikan tempat input
-<label> mendefinisikan sebuah label untuk kontrol <input> 
-<meta> mendefinisikan memberi metadata terstruktur mengenai isi dokumen
-<style> untuk mengisi informasi style seperti CSS pada head
-<table> mendefinisikan table
-<td> mendefinisikan cell pada table
-<th> mendefinisikan header cell pada table
-<tr> mendefinisikan row dari cells pada table
+< a > mendefinisikan hyperlink
+< b > mendefinisikan bold style pada text
+< body > mendefinisikan body dari dokumen
+< br > membuat new line 
+< button > membuat button yang dapat diklik
+< div > menspesifikasikan sebuah section pada dokumen
+< form > mendefinisikan form html 
+< head > mendefinisikan porsi head dari dokumen yang berisi informasi tentang dokumen misalnya title
+< img > merepresentasikan gambar
+< input > mendefinisikan tempat input
+< label > mendefinisikan sebuah label untuk kontrol <input> 
+< meta > mendefinisikan memberi metadata terstruktur mengenai isi dokumen
+< style > untuk mengisi informasi style seperti CSS pada head
+< table > mendefinisikan table
+< td > mendefinisikan cell pada table
+< th > mendefinisikan header cell pada table
+< tr > mendefinisikan row dari cells pada table
 </p>
 
 
