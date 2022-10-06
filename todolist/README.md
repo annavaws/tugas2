@@ -47,7 +47,7 @@ views.py dan menambahkannya pada urls.py untuk routing. Tidak lupa juga membuat 
 
 <h2>Apa perbedaan dari Inline, Internal, dan External CSS? Apa saja kelebihan dan kekurangan dari masing-masing style?</h2>
 <p>
-Inline CSS artinya stylenya langsung ditulis pada suatu tag. Misalnya <h3 style = "color: blue">Hello</h3>
+Inline CSS artinya stylenya langsung ditulis pada suatu tag. Misalnya < h3 style = "color: blue">Hello</h3 >
 Internal CSS artinya stylenya berada pada <head> document tersebut dan bisa menggunakan class selector atau id selector.
 External CSS artinya stylenya berada pada folder static dengan file .css, cara menghubungakan html dan .css
 adalah dengan menyisipkan link pada file html. Dan harus menambahkan tag {% load staticfiles %}.
@@ -62,7 +62,7 @@ karena koneksi internet tidak bagus.
 
 <h2>Jelaskan tag HTML5 yang kamu ketahui.</h2>
 <p> 
-< a > mendefinisikan hyperlink
+< a > mendefinisikan hyperlink<br>
 < b > mendefinisikan bold style pada text
 < body > mendefinisikan body dari dokumen
 < br > membuat new line 
