@@ -1,27 +1,25 @@
-#task-table {
-  border-collapse: collapse;
-  width: 100%;
-  margin: 20px 0;
+/* #card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+#card :hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+#container {
+  padding: 2px 16px;
+} */
+
+.login {
+  background-color: #e79b32b8;
+  margin-bottom: 30px;
+  color: #000000;
+  font-family: lucida sans;
+  padding: 20px 20px 100px 100px;
 }
 
-#task-table td,
-#task-table th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-#task-table tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-#task-table tr:hover {
-  background-color: #ddd;
-}
-
-#task-table th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #000000;
-  color: white;
+#form {
+  background-color: #ec812fb8;
+  font-family: lucida sans;
+  color: #fffffe;
+  padding: 20px 20px 100px 100px;
 }

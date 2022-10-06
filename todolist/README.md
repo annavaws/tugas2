@@ -41,3 +41,67 @@ Setelah user mengisi data pada form, user dapat menekan tombol submit yang akan 
 Awalnya menggunakan command python manage.py startapp todolist untuk membuat aplikasi baru pada repositori. 
 Setelah itu di project_django menambahkan path todolist pada urls.py dan pada variabel INSTALLED_APPS di settings.py menambahkan todolist. Setelah itu membuat model Task pada models.py dengan atribut user, date, title, description, dan is_finished. Lalu mengimplementasikan form registrasi, login, dan logout dengan mengikuti tutorial sebelumnya pada file
 views.py dan menambahkannya pada urls.py untuk routing. Tidak lupa juga membuat tampilannya pada folder templates. Membuat tampilan utama todolist pada views.py show_todolist yang ditampilkan pada todolist.html beserta button-buttonnya. Tombol `Tambah Task Baru` akan melempar halaman ke link `../create-task/'. Fungsi create_task pada views.py untuk menampilkan form yaitu todolist_form.html. Setelah itu mendeploy ke Heroku dengan git add, commit, dan push ke repositori.
+</p>
+
+<h2>Tugas 5</h2>
+
+<h2>Apa perbedaan dari Inline, Internal, dan External CSS? Apa saja kelebihan dan kekurangan dari masing-masing style?</h2>
+<p>
+Inline CSS artinya stylenya langsung ditulis pada suatu tag. Misalnya <h3 style = "color: blue">Hello</h3>
+Internal CSS artinya stylenya berada pada <head> document tersebut dan bisa menggunakan class selector atau id selector.
+External CSS artinya stylenya berada pada folder static dengan file .css, cara menghubungakan html dan .css
+adalah dengan menyisipkan link pada file html. Dan harus menambahkan tag {% load staticfiles %}.
+Kelebihan Inline adalah akan berguna jika ingin melihat perubahan pada satu elemen sehingga mudah untuk memperbaiki kode dan proses load website juga akan lebih cepat.
+Kekurangan Inline adalah tidak efisien jika terdapat banyak elemen.
+Kelebihan Internal adalah bisa menggunakan class dan id selector pada <style>
+Kekurangan Internal adalah performa web bisa melambat karena setiap halaman perlu load css beda.
+Kelebihan External adalah ukuran file html menjadi lebih kecil dan file css dapat digunakan beberapa halaman website sekaligus sehingga load website juga akan cepat.
+Kekurangan External adalah halaman berpotensi berantakan jika file css tidak berhasil dipanggil oleh html
+karena koneksi internet tidak bagus.
+</p>
+
+<h2>Jelaskan tag HTML5 yang kamu ketahui.</h2>
+<p> 
+<a> mendefinisikan hyperlink
+<b> mendefinisikan bold style pada text
+<body> mendefinisikan body dari dokumen
+<br> membuat new line 
+<button> membuat button yang dapat diklik
+<div> menspesifikasikan sebuah section pada dokumen
+<form> mendefinisikan form html 
+<head> mendefinisikan porsi head dari dokumen yang berisi informasi tentang dokumen misalnya title
+<img> merepresentasikan gambar
+<input> mendefinisikan tempat input
+<label> mendefinisikan sebuah label untuk kontrol <input> 
+<meta> mendefinisikan memberi metadata terstruktur mengenai isi dokumen
+<style> untuk mengisi informasi style seperti CSS pada head
+<table> mendefinisikan table
+<td> mendefinisikan cell pada table
+<th> mendefinisikan header cell pada table
+<tr> mendefinisikan row dari cells pada table
+</p>
+
+
+<h2>Jelaskan tipe-tipe CSS selector yang kamu ketahui.</h2>
+<p>
+1. Element Selector
+Element selector menggunakan tag HTML sebagai selector untuk mengubah properti yang terdapat dalam tag tersebut.
+
+2. ID Selector(#id)
+ID selector menggunakan ID pada tag sebagai selector-nya. Menggunakan karakter # diikuti dengan id.
+
+3. Class Selector(.class)
+Class selector digunakan untuk memperindah tampilan template HTML dengan menambahkan class pada tag HTML,
+lalu menambahkan class selector pada file css. Menggunakan karakter . diikuti dengan nama class.
+
+4. Hover (:hover)
+Memilih link dengan mouse 
+
+dan masih banyak lagi yang bisa dibaca dari link berikut <a href="https://www.w3schools.com/cssref/css_selectors.asp">ini</a>
+</p>
+
+<h2>Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.</h2>
+<p>
+Reference membuat card dari <a href ="https://getbootstrap.com/docs/4.1/components/card/#card-groups">ini</a>
+https://www.youtube.com/watch?v=biOCexhZZd8
+</p>
