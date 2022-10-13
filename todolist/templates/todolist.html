@@ -2,53 +2,146 @@
 
 {% block content %}
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
-    <h1>Tugas 5 Assignment PBP/PBD</h1>
+    <title>Tugas 5 Assignment PBP/PBD</title>
 </head>
 
 <body>
-<div>
-    <b>Username: </b> {{nama}}
-</div>
+    <h1 class = "text">Tugas 5 Assignment PBP/PBD</h1>
+    <b class = "text">Username: {{nama}} </b>
+    <br>
+    <form method="POST">
+        {% csrf_token %}
+    <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" id="btn_trigger" data-bs-toggle="modal" data-bs-target="#id_modal">Add Task</button>
+    <!-- Modal -->
+    <div class="modal" tabindex="-1" id="id_modal">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add Task</h5>
+                <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+            </div>
+            <div class="modal-body">
+                <td>Title</td>
+                <td><input type="text" name="title" placeholder="Title" class="form-control" id="input_judul"></td>
 
-<button><a href="{%url 'todolist:create-task' %}">Tambah Task Baru</a></button>
-
-<div class="card-deck">
-{% for isi in data_todolist %}
-    <div class ="card" style="width: 18rem;">
-    <div class="card-body">
-        <h5 class="card-title">Date</h5>
-        <p class="card-text">{{isi.date}}</p>
-        <h5 class="card-title">Title</h5>
-        <p class="card-text">{{isi.title}}</p>
-        <h5 class="card-title">Description</h5>
-        <p class="card-text">{{isi.description}}</p>
-        <h5 class="card-title">Status</h5>
-        <p class="card-text">{{isi.is_finished}}</p>
+                <td>Description</td>
+                <td><input type="text" name="description" placeholder="Description" style="min-height: 100px" class="form-control" id="input_deskripsi"></td>
+            </div>
+            <div class="modal-footer">
+                <button id="add_todolist" data-dismiss="modal">Add Task</button>
+            </div>
+        </div>
+        </div>
     </div>
-    
-</div>
-{% endfor %}
-</div>
-<a href="{% url 'todolist:logout' %}" class="btn btn-primary">Logout</a>
-<h5>Sesi terakhir login: {{ last_login }}</h5>
+    </div>
+</form>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<table class="table ">
+    <thead>
+        <tr>
+            <th style>Date</th>
+            <th style>Title</th>
+            <th style>Description</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <p></p>
+    </tbody>
+</table>
+<a href="{% url 'todolist:logout' %}" class="btn btn-primary">Logout</a>
+<h5 class = "text">Sesi terakhir login: {{ last_login }}</h5>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script>
+    function addTask(){
+        var taskCount = $(".table > tbody").children().length;
+        for(var i = taskCount; i >= 2; i--){
+            $(".table > tbody > tr:nth-child(" + i + ")").remove();
+        }
+
+        $.get("json/", function(data) {
+            for(var i = 0; i < data.length; i++){
+                var tr = document.createElement("tr");
+
+                // var date_td = document.createElement("td");
+                // date_td.append(data[i].fields.date);
+                var judul_td = document.createElement("td");
+                judul_td.append(data[i].fields.title);
+                var deskripsi_td = document.createElement("td");
+                deskripsi_td.append(data[i].fields.description);
+                // tr.append(date_td);
+                tr.append(judul_td);
+                tr.append(deskripsi_td);
+                
+
+                $(".table").append(tr);
+            }
+        });
+    }
+
+    jQuery(function($){
+        $(document).ready(function($){
+            console.log("adddd")
+            addTask();
+            
+            $("#add_todolist").click(function(){ 
+                console.log("msk ga")
+                //Ketika di-click
+    
+                var judul = $("#input_judul").val();
+                var deskripsi = $("#input_deskripsi").val();
+
+                // AJAX POST
+                $.post("add/",
+                {
+                    judul,
+                    deskripsi,
+                },
+                function(data, status){
+                    console.log("add todolist success");
+                    addTask();
+                    $("#input_judul").val("");
+                    $("#input_deskripsi").val("");
+                    });
+                });
+        });
+    });
+    
+    $("#btn_trigger").click(function(e){
+        console.log("triggerrr")
+        e.preventDefault();
+        $("#id_modal").modal();
+    });
+
+</script>
 </body>
 
+
 <style>
+    body {
+    background-image: linear-gradient(to right, #2e38a3, rgb(140, 153, 207), #2e38a3);
+    }
     .card{
-        background-color: bisque;
+        background-color: rgb(247, 255, 27);
         font-family: lucida sans;
         padding: 20px 50px 10px 50px;
     }
     .card-title{
-        color : rgb(25, 69, 28);
+        color : rgb(69, 50, 25);
         font-family: lucida sans;
-  
+    }
+    .text{
+        color : rgb(243, 255, 205);
+        font-family: lucida sans;
     }
 </style>
 {% endblock content %}

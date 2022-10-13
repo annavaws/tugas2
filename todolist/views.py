@@ -18,12 +18,11 @@ from django.contrib.auth.decorators import login_required
 import datetime
 from django.http import HttpResponseRedirect
 from django.urls import reverse
-
+from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
 
 # agar halaman todokist hanya dapat diakses oleh pengguna yang sudah login
 @login_required(login_url='/todolist/login/')
-
 def show_todolist(request):
     # untuk tampilin sesuai user yang login
     data_todolist = Task.objects.filter(user=request.user)
@@ -35,10 +34,26 @@ def show_todolist(request):
     # return todolist.html sebagai tampilan
     return render(request, "todolist.html", context)
 
+@login_required(login_url='/todolist/login/')
+def show_json(request):
+    data= Task.objects.filter(user=request.user)
+    return HttpResponse(serializers.serialize("json", data), content_type="application/json")
+
+@login_required(login_url='/todolist/login/')
+@csrf_exempt
+def add(request):
+    if request.method == "POST":
+        title = request.POST.get("title")
+        description = request.POST.get("description")
+        # is_finished = request.POST.get("is_finished")
+        Task.objects.create(title = title, description = description,user = request.user,date =datetime.datetime.now())
+        return HttpResponse()
+    else:
+        return redirect("todolist:show_todolist")
+
 
 def register(request):
     form = UserCreationForm()
-
     if request.method == "POST":
         form = UserCreationForm(request.POST)
         if form.is_valid():
@@ -74,14 +89,13 @@ def logout_user(request):
     response.delete_cookie('last_login')
     return response
 
-
+@login_required(login_url='/todolist/login/')
 def create_task(request):
-
     context = {
         'data_todolist': Task.objects.all,
         'nama': request.user.username,
     }
-    print("request method", request.method)
+    # print("request method", request.method)
     if request.method == "POST":
         form = TaskForm(request.POST)
         if form.is_valid():
