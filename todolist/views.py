@@ -46,7 +46,7 @@ def add(request):
         title = request.POST.get("title")
         description = request.POST.get("description")
         # is_finished = request.POST.get("is_finished")
-        Task.objects.create(title = title, description = description,user = request.user)
+        Task.objects.create(title = title, description = description,user = request.user, date=datetime.datetime.now())
         return HttpResponse()
     else:
         return redirect("todolist:show_todolist")
