@@ -1,3 +1,4 @@
+<h1> Link menuju ke aplikasi https://aplikasi-katalog.herokuapp.com/todolist/ </h1>
 <h2>Perbedaan antara asynchronous programming dengan synchronous programming.</h2>
 <p>Perbedaanya adalah cara program mengeksekusi program yang mempengaruhi lama waktunya.
 Untuk asynchronous akan memakan waktuyang lebih singkat karena dapat mengeksekusi banyak function secara bersamaan. Untuk synchronous
@@ -10,7 +11,7 @@ melanjutkannya dengan function lain.
 <p>
 Paradigma Event-Driven Programming adalah suatu alur pemrograman yang alurnya ditentukan
 oleh sebuah event, seperti ketika suatu button yang diklik.
-Contoh penerapan yang saya gunakan adalah 
+Contoh penerapan yang saya gunakan adalah <br>
  $("#btn_trigger").click(function(e){<br>
        <tab>console.log("triggerrr")<br>
        <tab>e.preventDefault();<br>
