@@ -46,7 +46,7 @@ def add(request):
         title = request.POST.get("title")
         description = request.POST.get("description")
         # is_finished = request.POST.get("is_finished")
-        Task.objects.create(title = title, description = description,user = request.user,date =datetime.datetime.now())
+        Task.objects.create(title = title, description = description,user = request.user)
         return HttpResponse()
     else:
         return redirect("todolist:show_todolist")
@@ -89,28 +89,28 @@ def logout_user(request):
     response.delete_cookie('last_login')
     return response
 
-@login_required(login_url='/todolist/login/')
-def create_task(request):
-    context = {
-        'data_todolist': Task.objects.all,
-        'nama': request.user.username,
-    }
-    # print("request method", request.method)
-    if request.method == "POST":
-        form = TaskForm(request.POST)
-        if form.is_valid():
-            task = Task()
-            task.user = request.user
-            task.title = form.cleaned_data['title']
-            task.description = form.cleaned_data['description']
-            task.is_finished = form.cleaned_data['is_finished']
-            # validate
-            task.save()
-            return HttpResponseRedirect(reverse('todolist:show_todolist'))
-    else:
-        form = TaskForm()
-    context['form'] = form
-    return render(request, 'todolist_form.html', context)
+# @login_required(login_url='/todolist/login/')
+# def create_task(request):
+#     context = {
+#         'data_todolist': Task.objects.all,
+#         'nama': request.user.username,
+#     }
+#     # print("request method", request.method)
+#     if request.method == "POST":
+#         form = TaskForm(request.POST)
+#         if form.is_valid():
+#             task = Task()
+#             task.user = request.user
+#             task.title = form.cleaned_data['title']
+#             task.description = form.cleaned_data['description']
+#             task.is_finished = form.cleaned_data['is_finished']
+#             # validate
+#             task.save()
+#             return HttpResponseRedirect(reverse('todolist:show_todolist'))
+#     else:
+#         form = TaskForm()
+#     context['form'] = form
+#     return render(request, 'todolist_form.html', context)
 
 # def update_task(request, task_id):
 #     task = get_object_or_404(Task, pk=task_id)

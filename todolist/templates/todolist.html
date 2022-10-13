@@ -3,6 +3,7 @@
 {% block content %}
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
     <title>Tugas 5 Assignment PBP/PBD</title>
@@ -72,13 +73,13 @@
             for(var i = 0; i < data.length; i++){
                 var tr = document.createElement("tr");
 
-                // var date_td = document.createElement("td");
-                // date_td.append(data[i].fields.date);
+                var date_td = document.createElement("td");
+                date_td.append(data[i].fields.date);
                 var judul_td = document.createElement("td");
                 judul_td.append(data[i].fields.title);
                 var deskripsi_td = document.createElement("td");
                 deskripsi_td.append(data[i].fields.description);
-                // tr.append(date_td);
+                tr.append(date_td);
                 tr.append(judul_td);
                 tr.append(deskripsi_td);
                 
@@ -99,7 +100,6 @@
     
                 var judul = $("#input_judul").val();
                 var deskripsi = $("#input_deskripsi").val();
-
                 // AJAX POST
                 $.post("add/",
                 {
