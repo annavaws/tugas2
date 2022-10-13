@@ -40,20 +40,21 @@
     </div>
     </div>
 </form>
+    
+    <table class="table ">
+        <thead>
+            <tr>
+                <th style>Date</th>
+                <th style>Title</th>
+                <th style>Description</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <p></p>
+        </tbody>
+    </table>
 
-<table class="table ">
-    <thead>
-        <tr>
-            <th style>Date</th>
-            <th style>Title</th>
-            <th style>Description</th>
-
-        </tr>
-    </thead>
-    <tbody>
-        <p></p>
-    </tbody>
-</table>
 <a href="{% url 'todolist:logout' %}" class="btn btn-primary">Logout</a>
 <h5 class = "text">Sesi terakhir login: {{ last_login }}</h5>
 
@@ -100,6 +101,7 @@
     
                 var judul = $("#input_judul").val();
                 var deskripsi = $("#input_deskripsi").val();
+                
                 // AJAX POST
                 $.post("add/",
                 {
@@ -128,7 +130,7 @@
 
 <style>
     body {
-    background-image: linear-gradient(to right, #2e38a3, rgb(140, 153, 207), #2e38a3);
+    background-image: linear-gradient(to right, #6a74ea, rgb(208, 216, 248));
     }
     .card{
         background-color: rgb(247, 255, 27);
